@@ -15,6 +15,8 @@ app = FastAPI(
     description="AI-powered repository analysis",
     version="1.0.0"
 )
+origin = os.getenv("FRONTEND_URL")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
